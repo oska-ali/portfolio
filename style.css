@@ -1,39 +1,99 @@
-body {
+/* Global styles */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #f3f4f6;          /* Light grey background */
+    color: #111827;               /* Dark grey text */
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background: #222;
-    color: white;
+    background: linear-gradient(135deg, #111827, #1f2937); /* Dark gradient */
+    color: #ffffff;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Main layout */
 main {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 20px 40px;
 }
 
+/* Sections as cards */
 section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #ffffff;          /* White card */
+    padding: 24px 20px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+    border-top: 4px solid #10b981; /* Accent color (teal/green) */
 }
 
-h2 {
-    margin-top: 0;
-    color: #222;
+section h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #0f172a;
 }
 
+/* Lists */
+section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+section ul li {
+    margin-bottom: 4px;
+}
+
+/* Contact text */
+section p {
+    margin-top: 6px;
+    font-size: 0.98rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #ddd;
-    margin-top: 40px;
-    font-size: 14px;
+    padding: 16px 10px 24px;
+    background: #e5e7eb;          /* Soft grey footer */
+    font-size: 0.85rem;
+    color: #4b5563;
+    border-top: 1px solid #d1d5db;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        margin-top: 24px;
+    }
+
+    section {
+        padding: 18px 16px;
+    }
 }
